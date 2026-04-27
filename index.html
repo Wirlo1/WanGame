@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>test_bevy</title>
+    <style>
+      * { margin: 0; padding: 0; }
+      body { background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
+      canvas { display: block; }
+    </style>
+  <link rel="modulepreload" href="/WanGame/test_bevy-7ce307ebd5ccc46e.js" crossorigin="anonymous" integrity="sha384-W33zz/slPlflSf9MB4llxzXxq1j72th+1O9DjNlswCTHVUGCMVpmyg0iG42uYs/4"><link rel="preload" href="/WanGame/test_bevy-7ce307ebd5ccc46e_bg.wasm" crossorigin="anonymous" integrity="sha384-BB5jTG1Z2EFZkbTxgfJxHE9hjvI9cwVUAD5OuTGDCmfJBpMWRBkBfo5anWa9GIOz" as="fetch" type="application/wasm"></head>
+  <body>
+    
+<script type="module">
+import init, * as bindings from '/WanGame/test_bevy-7ce307ebd5ccc46e.js';
+const wasm = await init({ module_or_path: '/WanGame/test_bevy-7ce307ebd5ccc46e_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+  </body>
+</html>
